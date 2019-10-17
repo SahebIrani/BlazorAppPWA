@@ -1,0 +1,15 @@
+﻿http://blazorhelpwebsite.com/Blog/tabid/61/EntryId/4360/Making-A-Server-Side-Blazor-Application-a-Progressive-Web-Application.aspx
+
+Installation
+Install the nuget BlazorPWA.MsBuild
+
+Package Manager:
+Install-Package BlazorPWA.MSBuild -Version 1.0.0
+
+.NET Cli:
+dotnet add package BlazorPWA.MSBuild --version 1.0.0
+
+Package Reference
+<PackageReference Include="BlazorPWA.MSBuild" Version="1.0.0"/>
+
+

@@ -1,0 +1,2 @@
+﻿http://blazorhelpwebsite.com/Blog/tabid/61/EntryId/4360/Making-A-Server-Side-Blazor-Application-a-Progressive-Web-Application.aspx
+
