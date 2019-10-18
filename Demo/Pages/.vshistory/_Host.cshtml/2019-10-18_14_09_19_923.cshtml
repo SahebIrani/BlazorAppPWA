@@ -1,0 +1,67 @@
+@page "/"
+@namespace Demo.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo</title>
+    <base href="~/" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link href="css/site.css" rel="stylesheet" />
+    <link rel="manifest" href="~/manifest.json">
+    <link rel="script" href="~/sw.js">
+    <meta name="theme-color" content="#052767" />
+    @*<script src="~/ServiceWorkerRegister.js"></script>*@
+    @*<link href="~/manifest.json" rel="manifest" />*@
+</head>
+<body>
+    <app>
+        @(await Html.RenderComponentAsync<App>(RenderMode.ServerPrerendered))
+    </app>
+
+    <script src="_framework/blazor.server.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            console.log('Registering service worker now');
+            navigator.serviceWorker.register('/serviceworker.js')
+                .then(function () {
+                    console.log('Service Worker Registered');
+                });
+        }
+    </script>
+
+    <script>
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            e.prompt();
+
+            e.userChoice
+                .then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('User accepted the install prompt');
+                    }
+                });
+        });
+
+        if ("serviceWorker" in navigator) {
+            if (navigator.serviceWorker.controller) {
+                console.log("[PWA Builder] active service worker found, no need to register");
+            }
+            else {
+                // Register the service worker
+                navigator.serviceWorker
+                    .register("pwabuilder-sw.js", {
+                        scope: "./"
+                    })
+                    .then(function (reg) {
+                        console.log("[PWA Builder] Service worker has been registered for scope: " + reg.scope);
+                    });
+            }
+        }
+    </script>
+</body>
+</html>

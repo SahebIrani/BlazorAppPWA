@@ -161,9 +161,9 @@ app {
 
 
 .install-prompt {
-    font-family:'B Titr';
-    direction:rtl;
-    background-color: #54595f;
+    font-family: 'B Titr';
+    direction: rtl;
+    background-color: #2f175b;
     color: #fff;
     position: fixed;
     bottom: 0.5rem;

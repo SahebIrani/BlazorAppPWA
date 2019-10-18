@@ -3,28 +3,36 @@
   "name": "SinjulMSBH Blazor App PWA",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#3a0647",
-  "theme_color": "#052767",
   "icons": [
     {
-      "src": "/0default-icon-192x192.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "src":"/0default-icon-192x192.png",
+      "type":"image/png",
+      "sizes":"192x192"
     },
     {
-      "src": "/default-icon-192x192.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "src":"/default-icon-192x192.png",
+      "type":"image/png",
+      "sizes":"192x192"
     },
     {
-      "src": "/0default-icon-512x512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src":"/icon-192x192.png",
+      "type":"image/png",
+      "sizes":"192x192"
     },
     {
-      "src": "/default-icon-512x512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src":"/0default-icon-512x512.png",
+      "type":"image/png",
+      "sizes":"512x512"
+    },
+    {
+      "src":"/default-icon-512x512.png",
+      "type":"image/png",
+      "sizes":"512x512"
+    },
+    {
+      "src":"/icon-512x512.png",
+      "type":"image/png",
+      "sizes":"512x512"
     }
   ]
 }
