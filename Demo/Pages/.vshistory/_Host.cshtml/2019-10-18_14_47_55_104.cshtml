@@ -14,7 +14,6 @@
     <meta name="theme-color" content="#052767" />
     <link href="/manifest.json" rel="manifest" />
     <script src="/ServiceWorkerRegister.js"></script>
-    @*<script src="/sworker.js"></script>*@
     @*<link rel="script" href="~/sw.js">*@
     @*<script src="~/pwabuilder-sw.js"></script>*@
 </head>
@@ -37,15 +36,15 @@
 
     @*◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘*@
 
-    @*<script>
+    <script>
         if ('serviceWorker' in navigator) {
             console.log('Registering service worker now');
-            navigator.serviceWorker.register('/sworker.js')
+            navigator.serviceWorker.register(' /sworker.js')
                 .then(function () {
                     console.log('Service Worker Registered .. !!!!');
                 });
         }
-    </script>*@
+    </script>
 
     @*◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘◘*@
 
